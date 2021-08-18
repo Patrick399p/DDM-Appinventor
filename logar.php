@@ -15,6 +15,12 @@
 
     if(mysli_num_rows($sql)>0){
         echo "login_ok"
+        while ($dados = $sql->fetch_array()) {
+            echo $dados['id'];
+            echo ",";
+            echo $dados['nome'];
+            
+        }
     }else{
         echo "login_erro"
     }
